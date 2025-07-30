@@ -1,3 +1,9 @@
+FROM python:3.11-slim
+
+RUN apt-get update && \
+    apt-get install -y python3-stdlib-extensions && \
+    pip install --no-cache-dir -r requirements.txt
+
 FROM python:3
 
 WORKDIR /data
